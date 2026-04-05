@@ -1,0 +1,520 @@
+Request at 2025-06-02 10:11:00
+POST data: Array
+(
+    [chat-text-field] => asdad
+)
+
+
+Request at 2025-06-02 10:11:04
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-06-02 10:11:08
+POST data: Array
+(
+    [chat-text-field] => bruh
+)
+
+
+Request at 2025-06-02 10:12:29
+POST data: Array
+(
+    [chat-text-field] => BRUH
+)
+
+
+Request at 2025-06-02 10:12:34
+POST data: Array
+(
+    [chat-text-field] => BRGG
+)
+
+
+Request at 2025-06-02 10:15:31
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-02 10:26:04
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-02 10:26:09
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-02 10:26:23
+POST data: Array
+(
+    [chat-text-field] => sadasdasd
+)
+
+
+Request at 2025-06-02 14:22:02
+POST data: Array
+(
+    [chat-text-field] => ghey
+)
+
+
+Request at 2025-06-02 14:24:06
+POST data: Array
+(
+    [chat-text-field] => bruh
+)
+
+
+Request at 2025-06-02 21:44:05
+POST data: Array
+(
+    [chat-text-field] => bakit
+)
+
+
+Request at 2025-06-04 16:24:27
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-04 20:46:24
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-06-04 20:48:01
+POST data: Array
+(
+    [chat-text-field] => ehat bro
+)
+
+
+Request at 2025-06-05 13:34:53
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-06-05 13:37:30
+POST data: Array
+(
+    [chat-text-field] => bro
+)
+
+
+Request at 2025-06-12 21:35:49
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-12 21:35:59
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-18 09:57:36
+POST data: Array
+(
+    [chat-text-field] => ok
+)
+
+
+Request at 2025-06-18 09:57:53
+POST data: Array
+(
+    [chat-text-field] => sige
+)
+
+
+Request at 2025-06-18 09:58:12
+POST data: Array
+(
+    [chat-text-field] => ge
+)
+
+
+Request at 2025-06-18 20:26:25
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Error at 2025-06-18 20:26:25
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-18 20:26:28
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Error at 2025-06-18 20:26:28
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-18 20:26:35
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Error at 2025-06-18 20:26:35
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-18 20:26:38
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Error at 2025-06-18 20:26:38
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-18 20:26:53
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Error at 2025-06-18 20:26:53
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2025-06-18 20:27:09
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Error at 2025-06-18 20:27:09
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2025-06-18 20:48:33
+POST data: Array
+(
+    [chat-text-field] => sige
+)
+
+
+Request at 2025-06-18 23:43:19
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Error at 2025-06-18 23:43:19
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-06-18 23:43:22
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Error at 2025-06-18 23:43:22
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-06-18 23:43:47
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2025-08-19 16:09:29
+POST data: Array
+(
+    [chat-text-field] => hhi
+)
+
+
+Error at 2025-08-19 16:09:29
+Session user_id: not set
+POST data: Array
+(
+    [chat-text-field] => hhi
+)
+
+
+Request at 2025-08-19 16:13:21
+POST data: Array
+(
+    [chat-text-field] => hi
+)
+
+
+Request at 2025-08-19 16:13:26
+POST data: Array
+(
+    [chat-text-field] => ge
+)
+
+
+Request at 2025-08-19 16:34:43
+POST data: Array
+(
+    [chat-text-field] => hi
+)
+
+
+Request at 2025-08-19 16:35:25
+POST data: Array
+(
+    [chat-text-field] => magkano ba sabon
+)
+
+
+Request at 2025-12-24 11:08:42
+POST data: Array
+(
+    [chat-text-field] => ge
+)
+
+
+Request at 2025-12-24 11:09:58
+POST data: Array
+(
+    [chat-text-field] => hhi
+)
+
+
+Request at 2025-12-24 14:48:29
+POST data: Array
+(
+    [chat-text-field] => hi
+)
+
+
+Request at 2025-12-24 14:48:33
+POST data: Array
+(
+    [chat-text-field] => ge
+)
+
+
+Request at 2025-12-24 14:48:35
+POST data: Array
+(
+    [chat-text-field] => magkano ba sabon
+)
+
+
+Request at 2025-12-24 15:06:08
+POST data: Array
+(
+    [chat-text-field] => hi
+)
+
+
+Request at 2026-01-28 11:00:10
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2026-01-28 11:08:31
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2026-01-28 12:19:54
+POST data: Array
+(
+    [chat-text-field] => asd
+)
+
+
+Request at 2026-01-28 13:23:09
+POST data: Array
+(
+    [chat-text-field] => hhi
+)
+
+
+Request at 2026-02-05 15:30:04
+POST data: Array
+(
+    [chat-text-field] => asdasd
+)
+
+
+Request at 2026-02-19 00:21:18
+POST data: Array
+(
+    [chat-text-field] => bruh
+)
+
+
+Request at 2026-02-19 00:21:57
+POST data: Array
+(
+    [chat-text-field] => hello bruh
+)
+
+
+Request at 2026-03-29 18:46:29
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:47:55
+POST data: Array
+(
+    [chat-text-field] => ssdasd
+)
+
+
+Request at 2026-03-29 18:48:12
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:51:14
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:51:22
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:53:30
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:53:38
+POST data: Array
+(
+    [chat-text-field] => ssdasd
+)
+
+
+Request at 2026-03-29 18:55:20
+POST data: Array
+(
+    [chat-text-field] => ssdasd
+)
+
+
+Request at 2026-03-29 18:56:00
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:59:05
+POST data: Array
+(
+    [chat-text-field] => hey
+)
+
+
+Request at 2026-03-29 18:59:14
+POST data: Array
+(
+    [chat-text-field] => ssdasd
+)
+
+
+Request at 2026-04-01 00:37:10
+POST data: Array
+(
+    [chat-text-field] => this good?
+)
+
+
+Request at 2026-04-01 00:37:21
+POST data: Array
+(
+    [chat-text-field] => bro
+)
+
+
+Request at 2026-04-03 10:26:42
+POST data: Array
+(
+    [chat-text-field] => ok
+)
+
+

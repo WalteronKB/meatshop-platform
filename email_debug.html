@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Test - Meat Shop</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .test-section { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .result { margin: 10px 0; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin: 5px; }
+        button:hover { background: #0056b3; }
+        input, textarea { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+        .config-display { background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🔧 EmailJS Debugging Tool</h1>
+    <p>This tool will help us identify why emails aren't working in your MRB Fire Extinguisher system.</p>
+
+    <div class="test-section">
+        <h2>📋 Current Configuration</h2>
+        <div class="config-display">
+            <strong>Service ID:</strong> service_y62evzw<br>
+            <strong>Template ID:</strong> template_vnnfovm<br>
+            <strong>User ID:</strong> ByfBqlg8U4c7l7Vzi<br>
+            <strong>Reply To:</strong> admin@lotusfireex.com
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>✅ Step 1: Initialize EmailJS</h2>
+        <button onclick="initializeEmailJS()">Initialize EmailJS</button>
+        <div id="initResult" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>📧 Step 2: Test Email Sending</h2>
+        <input type="email" id="testEmail" placeholder="Enter test email address" value="test@example.com">
+        <input type="text" id="testMessage" placeholder="Enter test message" value="This is a test cancellation email">
+        <button onclick="sendTestEmail()">Send Test Email</button>
+        <div id="emailResult" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔥 Step 3: Test Cancellation Email Format</h2>
+        <input type="text" id="productName" placeholder="Product name" value="Fire Extinguisher ABC-123">
+        <button onclick="sendCancellationTest()">Send Cancellation Email Test</button>
+        <div id="cancellationResult" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 Step 4: Check Browser Console</h2>
+        <p>Open your browser's Developer Tools (F12) and check the Console tab for any error messages.</p>
+        <button onclick="checkConsole()">Show Console Instructions</button>
+        <div id="consoleResult" class="result"></div>
+    </div>
+
+    <script>
+        let emailjsInitialized = false;
+
+        function logResult(elementId, message, type = 'info') {
+            const element = document.getElementById(elementId);
+            element.className = `result ${type}`;
+            element.innerHTML = message;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        }
+
+        function initializeEmailJS() {
+            try {
+                // Initialize EmailJS
+                emailjs.init("ByfBqlg8U4c7l7Vzi");
+                emailjsInitialized = true;
+                logResult('initResult', '✅ EmailJS initialized successfully!', 'success');
+            } catch (error) {
+                logResult('initResult', `❌ EmailJS initialization failed: ${error.message}`, 'error');
+                console.error('EmailJS Init Error:', error);
+            }
+        }
+
+        function sendTestEmail() {
+            if (!emailjsInitialized) {
+                logResult('emailResult', '❌ Please initialize EmailJS first!', 'error');
+                return;
+            }
+
+            const testEmail = document.getElementById('testEmail').value;
+            const testMessage = document.getElementById('testMessage').value;
+
+            if (!testEmail || !testMessage) {
+                logResult('emailResult', '❌ Please enter both email and message!', 'error');
+                return;
+            }
+
+            logResult('emailResult', '📤 Sending test email...', 'info');
+
+            const templateParams = {
+                to_email: testEmail,
+                recipient_email: testEmail,
+                to_name: testEmail.split('@')[0],
+                from_name: "MRB Fire Extinguisher Admin",
+                message: testMessage,
+                subject: "Test Email from MRB Fire Extinguisher",
+                reply_to: "admin@lotusfireex.com"
+            };
+
+            console.log('Template parameters:', templateParams);
+
+            emailjs.send('service_y62evzw', 'template_vnnfovm', templateParams)
+                .then(function(response) {
+                    console.log('Email success response:', response);
+                    logResult('emailResult', `✅ Test email sent successfully! Status: ${response.status}, Text: ${response.text}`, 'success');
+                })
+                .catch(function(error) {
+                    console.error('Email error:', error);
+                    logResult('emailResult', `❌ Email failed: ${error.text || error.message || 'Unknown error'}`, 'error');
+                });
+        }
+
+        function sendCancellationTest() {
+            if (!emailjsInitialized) {
+                logResult('cancellationResult', '❌ Please initialize EmailJS first!', 'error');
+                return;
+            }
+
+            const testEmail = document.getElementById('testEmail').value;
+            const productName = document.getElementById('productName').value;
+
+            if (!testEmail || !productName) {
+                logResult('cancellationResult', '❌ Please enter both email and product name!', 'error');
+                return;
+            }
+
+            logResult('cancellationResult', '📤 Sending cancellation email test...', 'info');
+
+            const cancellationMessage = `Your ${productName} order is cancelled`;
+
+            const templateParams = {
+                to_email: testEmail,
+                recipient_email: testEmail,
+                to_name: testEmail.split('@')[0],
+                from_name: "MRB Fire Extinguisher Admin",
+                message: cancellationMessage,
+                subject: "Order Cancellation Notice - MRB Fire Extinguisher",
+                reply_to: "admin@lotusfireex.com"
+            };
+
+            console.log('Cancellation template parameters:', templateParams);
+
+            emailjs.send('service_y62evzw', 'template_vnnfovm', templateParams)
+                .then(function(response) {
+                    console.log('Cancellation email success:', response);
+                    logResult('cancellationResult', `✅ Cancellation email sent successfully! Message: "${cancellationMessage}"`, 'success');
+                })
+                .catch(function(error) {
+                    console.error('Cancellation email error:', error);
+                    logResult('cancellationResult', `❌ Cancellation email failed: ${error.text || error.message || 'Unknown error'}`, 'error');
+                });
+        }
+
+        function checkConsole() {
+            logResult('consoleResult', `
+                📋 <strong>How to check browser console:</strong><br>
+                1. Press <strong>F12</strong> or right-click → "Inspect Element"<br>
+                2. Click the <strong>"Console"</strong> tab<br>
+                3. Look for any red error messages<br>
+                4. Try sending an email and watch for new messages<br><br>
+                🔍 <strong>Common issues to look for:</strong><br>
+                • CORS errors (cross-origin resource sharing)<br>
+                • Network errors (403, 401, 500 status codes)<br>
+                • "Invalid template" or "Service not found" errors<br>
+                • JavaScript errors in EmailJS library
+            `, 'info');
+        }
+
+        // Auto-initialize when page loads
+        window.addEventListener('load', function() {
+            initializeEmailJS();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --font-family-1: "Instrument Serif", serif;
+  --font-family-2: "DM Sans", sans-serif;
+  --font-family-3: "Londrina Solid", sans-serif;
+  --font-color-nav1: #f0eeee;
+  --font-color-nav2: #8B4513;
+  --background-color: #ffffff;
+  --default-color: #212529;
+  --heading-color: #2d465e;
+  --accent-color: #8B4513;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --nav-color: #212529;
+  --nav-hover-color: #0d83fd;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #212529;
+  --nav-dropdown-hover-color: #0d83fd;
+  --primary-default-red: #8B4513;
+  --light: #F7FAFF;
+  --contact-color: #181010;
+
+}
+
+.body-windows {
+  display: flex;
+  justify-content: center;
+
+  min-height: 70vh;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+.search-bar {
+  border-radius: 20px;
+  padding-left: 35px;
+  background-color: #f0eeee;
+  background-image: url('https://img.icons8.com/ios-filled/50/search.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.placeholder-box {
+  background-color: #f0eeee;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  font-family: var(--font-family);
+  color: var(--default-color);
+}
+
+.nav-text-1 {
+  font-family: var(--font-family);
+  color: var(--font-color-nav1);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.nav-text-2 {
+  font-family: var(--font-family);
+  color: var(--font-color-nav2);
+  font-size: 0.875rem;
+}
+
+  .mini-navbar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .mini-navbar > navbar > a, .mini-navbar > navbar > div > a, .mini-navbar > navbar > div > .dropdown-hover > a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+
+  /* Add to mrbstyle.css */
+ 
+.dropdown-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-hover-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-hover:hover .dropdown-hover-menu {
+  display: block;
+}
+.dropdown-menu{
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.dropdown-menu > li{
+  padding: 10px 20px;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.dropdown-menu > li > a{
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.9em;
+  border-radius: 10px;
+}
+
+/* To maintain consistent styling with Bootstrap dropdowns */
+.dropdown-hover .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+  .icon-input {
+    position: relative;
+    display: inline-block;
+    width: 286px;
+  }
+  
+  .icon-input i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1rem;
+    pointer-events: none;
+  }
+  
+  .icon-input input {
+    width: 100%;
+    height: 45px;
+    padding-left: 40px; /* space for the icon */
+    border: none;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+    outline: none;
+    font-size: 16px;
+  }
+  .clean-dropdown {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    min-width: 150px; /* control width for alignment */
+    padding: 0.5rem 1rem;
+  }
+  
+  .clean-dropdown:focus,
+  .clean-dropdown:hover {
+    background: none;
+    color: var(--accent-color);
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .dropdown-caret {
+    margin-left: auto;
+    font-size: 0.75rem;
+  }
+  
+  .clean-dropdown-menu {
+    border: none;
+    background: white;
+    box-shadow: none;
+    padding: 0;
+    min-width: auto;
+  }
+  
+  .clean-dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem;
+    color: var(--accent-color);
+    background: none;
+  }
+  
+  .clean-dropdown-menu .dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+/* Monitor frame Windows 7 style */
+.monitor-frame {
+  width: 1000px;
+  height: 600px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+  border-radius: 25px;
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.8),
+    inset 0 -5px 20px rgba(0, 0, 0, 0.15);
+  border: 6px solid #999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Screen area with Windows 7 wallpaper */
+.screen {
+  flex: 1;
+  background:
+    url('https://wallpapercave.com/wp/wp3469146.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Desktop icons container */
+.desktop-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  user-select: none;
+}
+
+/* Individual desktop icon style */
+.desktop-icons .icon {
+  width: 70px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  cursor: default;
+  font-weight: 600;
+  text-shadow: 0 0 3px black;
+}
+
+.desktop-icons .icon img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto 5px auto;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+/* Draggable window style (Windows 7 style) */
+.window {
+  width: 340px;
+  position: absolute;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #999;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Windows 7 Aero Title bar */
+.title-bar {
+  height: 30px;
+  background: linear-gradient(to bottom, #e3eaf6, #bbcdfa);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #9ab4d6;
+  border-bottom: none;
+  color: #0c3a72;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  box-shadow: inset 0 1px 1px white, inset 0 -1px 0 #7293ce;
+}
+
+/* Close button Windows 7 style */
+.close-btn {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(to bottom, #f53c3c, #b32323);
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+  background: linear-gradient(to bottom, #ff0000, #a00000);
+}
+
+.content {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.content img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: white;
+}
+
+.button-bar {
+  text-align: center;
+  padding: 10px 0 15px 0;
+}
+
+.win7-button {
+  font-size: 13px;
+  padding: 6px 20px;
+  background: linear-gradient(to bottom, #e6eefa, #b5c6f8);
+  border: 1px solid #7293ce;
+  border-radius: 5px;
+  color: #0c3a72;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 1px 1px white;
+  transition: background 0.3s ease;
+}
+
+.win7-button:active {
+  background: linear-gradient(to bottom, #9bb4ed, #7893df);
+}
+
+/* Taskbar Windows 7 style */
+.taskbar {
+  height: 40px;
+  background: linear-gradient(to bottom, #2b5797, #244a8a);
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: white;
+  font-size: 13px;
+}
+
+/* Windows 7 Start orb */
+.start-button {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, #4a82c8, #204d8b);
+  border-radius: 50%;
+  border: 1px solid #3662a6;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 2px 6px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.start-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.taskbar-apps {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.taskbar-app {
+  background: linear-gradient(to bottom, #3a66c4, #1a3a7e);
+  border-radius: 4px;
+  padding: 6px 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  font-weight: 600;
+}
+
+.taskbar-app.active {
+  background: linear-gradient(to bottom, #1a3a7e, #3a66c4);
+}
+
+.taskbar-right {
+  min-width: 80px;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#infoPanel {
+  background: #f1f1f1;
+  border-top: 2px solid #999;
+  height: 140px;
+  color: #333;
+  font-size: 14px;
+  padding: 15px;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+  display: none;
+}
+
+#infoPanel h3 {
+  margin-top: 0;
+  color: #244a8a;
+}
+
+#infoPanel ul {
+  padding-left: 20px;
+}
+
+#toggleInfo {
+  margin-left: 12px;
+  padding: 4px 10px;
+  background: #3a66c4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease;
+}
+
+#toggleInfo:hover {
+  background: #2a4a8a;
+}
+
+:root{
+  --accent-color: #C42F01; 
+  --font-family-2:"DM Sans", sans-serif;
+}
+
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(344px, 1fr))!important;
+    gap: 1.5rem!important;
+    justify-content: center!important;
+    justify-items: center!important;
+  }
+  .new-product{
+    background-color: var(--accent-color)!important;
+    color: var(--font-color-nav1)!important;
+    font-size: 0.890rem!important;
+    font-weight: 500!important;
+    font-family: var(--font-family-2)!important;
+    padding: 5px 10px!important;
+    border-radius: 10px!important;
+    text-align: center!important;
+    position: absolute!important;
+    bottom: 110px!important;
+    left: 10px!important;
+  }
+  .product-card{
+    background-color: white!important;
+    width: 344px!important;
+    border: none!important;
+    cursor: pointer!important;
+    box-shadow: none!important;
+    padding: 0;
+  }
+  .product-card:hover{
+    transform: translateY(-5px)!important;
+    background-color: rgba(255, 255, 255, 0.05)!important;
+    box-shadow: 0 4px 4px rgba(182, 182, 182, 0.4)!important;
+    transition: all 0.3s ease-in-out!important;
+  }
+  .product-img{
+    height: 306px!important;
+    width: 344px!important;
+    background-color: #bebebe!important;
+    size-adjust: contain!important;
+    border-radius: 10px!important;
+    overflow: hidden!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    position: relative!important;
+  }
+  .product-title{
+    max-width: 315px!important;
+    overflow: hidden!important;
+    font-size: 0.995rem!important;
+    color: var(--accent-color)!important;
+    font-weight: 600px!important;
+    font-family: var(--font-family-2)!important;
+    font-weight: 700!important;
+  }
+  .help-icon{
+    color: #838383!important;
+    font-size: 1.5em!important;
+    font-weight: 300!important;
+  }
+  .old-price{
+    color: #969696!important;
+    text-decoration: line-through!important;
+    font-size: 1.125rem!important;
+  }
+  .new-price{
+    color: var(--accent-color)!important;
+    text-decoration: none!important;
+    font-size: 1.5rem!important;
+    font-weight: 800!important;
+    font-family: var(--font-family-2)!important;
+  }
+  .product-pagination{
+    margin: 0 auto!important;
+    justify-self: center!important;
+    gap: 1.3rem!important;
+  }
+  .product-pagination > li{
+    font-weight: 700!important;
+    height: 40px!important;
+    width: 40px!important;
+    text-align: center!important;
+    background-color: white!important;
+  }
+  .product-pagination > li > a{
+    font-size: 1.3em!important;
+    color: var(--accent-color)!important;
+  }
+  .product-pagination > li > a:hover{
+    background-color: #ac660b!important;
+    color: #ffffff!important;
+  }
+  .page-link-active{
+    background-color: var(--accent-color)!important;
+    color: white !important;
+    font-family: var(--font-family-2)!important;
+  }
+  .quote{
+    text-align: center!important;
+    margin-top: 50px!important;
+    font-size: 1.6rem!important;
+    font-weight: 750!important;
+  }

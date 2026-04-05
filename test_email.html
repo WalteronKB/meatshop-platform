@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test - Password Reset</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .test-section { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .result { margin: 10px 0; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        input { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Password Reset Email Test</h1>
+    
+    <div class="test-section">
+        <h2>📧 Test Password Reset Email</h2>
+        <input type="email" id="testEmail" placeholder="Enter your email address" value="marcmarquez.ramos@gmail.com">
+        <input type="text" id="testName" placeholder="Enter your name" value="Test User">
+        <button onclick="testPasswordReset()">Send Password Reset Email</button>
+        <div id="emailResult" class="result"></div>
+    </div>
+
+    <script>
+        // Initialize EmailJS
+        (function(){
+            console.log('Initializing EmailJS...');
+            try {
+                emailjs.init({
+                    publicKey: "ByfBqlg8U4c7l7Vzi"
+                });
+                console.log('EmailJS initialized successfully');
+            } catch (error) {
+                console.error('EmailJS initialization failed:', error);
+            }
+        })();
+
+        function testPasswordReset() {
+            const testEmail = document.getElementById('testEmail').value;
+            const testName = document.getElementById('testName').value;
+            
+            if (!testEmail || !testName) {
+                showResult('❌ Please enter both email and name!', 'error');
+                return;
+            }
+
+            showResult('📤 Sending password reset email...', 'info');
+
+            const resetLink = "http://localhost/MRBfireex/reset_password.php?token=test123";
+            
+            // Template parameters for password reset
+            const templateParams = {
+                name: testName,
+                email: testEmail,
+                message: `Hello ${testName},\n\nYou requested a password reset for your MRB Estelope Trading account.\n\nClick this link to reset your password: ${resetLink}\n\nThis link will expire in 24 hours.\n\nIf you didn't request this, please ignore this email.\n\nBest regards,\nMRB Estelope Trading Team`
+            };
+
+            console.log('Template parameters:', templateParams);
+
+            emailjs.send('service_y62evzw', 'template_d56wof5', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    showResult(`✅ Password reset email sent successfully to ${testEmail}!`, 'success');
+                })
+                .catch(function(error) {
+                    console.error('Email error:', error);
+                    showResult(`❌ Email failed: ${error.text || error.message || 'Unknown error'}`, 'error');
+                });
+        }
+
+        function showResult(message, type) {
+            const element = document.getElementById('emailResult');
+            element.className = `result ${type}`;
+            element.innerHTML = message;
+        }
+    </script>
+</body>
+</html>
